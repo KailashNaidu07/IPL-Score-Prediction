@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kola Kailash Kumar | IPL Score Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;  /* Royal blue */
+            --secondary: #3f37c9; /* Darker blue */
+            --accent: #4cc9f0;    /* Light blue */
+            --text: #2b2d42;     /* Dark gray-blue */
+            --light: #f8f9fa;     /* Off-white */
+            --highlight: #7209b7;  /* Purple accent */
+        }
+        
+        body {
+            font-family: 'Jost', sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        
+        .profile-card {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+        }
+        
+        .profile-image {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .profile-image i {
+            font-size: 8rem;
+            color: white;
+            opacity: 0.9;
+        }
+        
+        .profile-content {
+            padding: 3rem;
+            position: relative;
+        }
+        
+        .project-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .project-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        .developer-name {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 1.5rem 0 0.5rem;
+        }
+        
+        .developer-id {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            font-weight: 400;
+            margin-bottom: 2rem;
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(67, 97, 238, 0.1);
+            border-radius: 20px;
+        }
+        
+        .project-description {
+            margin-bottom: 2.5rem;
+            color: #555;
+        }
+        
+        .action-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(to right, var(--primary), var(--highlight));
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+        }
+        
+        .action-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(67, 97, 238, 0.4);
+        }
+        
+        .action-button i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .action-button:hover i {
+            transform: translateX(5px);
+        }
+        
+        .social-links {
+            position: absolute;
+            bottom: 2rem;
+            left: 3rem;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--highlight);
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .profile-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-image {
+                padding: 3rem;
+            }
+            
+            .profile-image i {
+                font-size: 5rem;
+            }
+            
+            .social-links {
+                position: static;
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="profile-image">
+            <i class="fas fa-user-graduate"></i>
+        </div>
+        <div class="profile-content">
+            <h1 class="project-title">IPL Score Prediction</h1>
+            <p class="project-description">
+                A machine learning project that predicts IPL match scores based on historical data and current match conditions.
+            </p>
+            
+            <h2 class="developer-name">Kola Kailash Kumar</h2>
+            <span class="developer-id">20C61A6604</span>
+            
+            <a href="{{ url_for('scorepredict') }}" class="action-button">
+                View Project <i class="fas fa-arrow-right"></i>
+            </a>
+            
+            <div class="social-links">
+                <a href="https://github.com/KailashNaidu07" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kailash-kumar-kola-32637a250" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/__kailash_naidu__" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:kailashnaidu07@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
